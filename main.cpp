@@ -12,11 +12,11 @@ int main(int argc, char *argv[]) {
 		fp = fopen(argv[i], "r");
 		if(fp != NULL) {
 			uint32_t num = getNum(fp);
-			printf("%d(0x%x)", num, num);
+			printf("%d(0x%04x)", num, num);
 			if(i < argc - 1)
 				printf(" + ");
 			sum += num;
 		}
 	}
-	printf(" = %d(0x%x)", sum, sum);
+	printf(" = %d(0x%04x)", sum, sum);
 }
